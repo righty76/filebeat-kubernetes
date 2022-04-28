@@ -1,0 +1,1 @@
+# Filebeat kubernetes
