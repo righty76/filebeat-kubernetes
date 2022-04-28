@@ -1,0 +1,19 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: filebeat
+  labels:
+    app.kubernetes.io/name: filebeat
+    app.kubernetes.io/instance: filebeat
+    app.kubernetes.io/version: "7.10.1"
+rules:
+  - apiGroups: 
+      - ""
+    resources:
+      - namespaces
+      - pods
+    verbs: 
+      - get
+      - watch
+      - list
+    
